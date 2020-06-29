@@ -23,7 +23,7 @@ The data used in this analysis has been scraped from Box Office Mojo for variabl
 
 ```{r, echo=FALSE}
 #Load Wide Releases Data Set
-wr <- read.csv("WideReleaseData_inflation.csv", header = TRUE)[,-1] 
+wr <- read.csv("Datasets/WideReleaseData_inflation.csv", header = TRUE)[,-1] 
 #Create Return on Investment (ROI) Columns
 wr$ROI <- wr$Total.Gross - wr$Budget
 ```
@@ -63,8 +63,6 @@ ggplot(wr) +
 
 ```
 <center> <font size="2"> <p style="color:grey">*Reviews adjusted to account for the total number of reviews as well as differences in scale. </p> </font> </center> \n
-
-
 
 As expected, all review aggregators maintain a positive relationship with total gross to some extent, i.e. as the score of each aggregator increases so too does its average total gross. However, of all review aggregators, Rotten Tomatoes demonstrates the strongest relationship with total gross in both audience and critics metrics as it demonstrates the strongest rates of increase and decrease at both extremes of possible reviews. Interestingly, though IMDB possesses no particularly extreme decrease in total gross for negatively reviewed films, positively rated films are correlated with the highest increase in total gross in relation to all other rating systems. As Metacritic reviews appear to be the least affected by changes to varying score values, the remainder of this analysis will focus primarily on Rotten Tomatoes and IMDB.
 
